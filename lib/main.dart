@@ -80,9 +80,9 @@ class _NewsSearchScreenState extends State<NewsSearchScreen> {
   bool _showSearchField = false;
 
   Future<List<Map<String, dynamic>>> _fetchAndFilterNews(String query) async {
-    String apiKey = '4b5b82fa46734dea986685f599bc7beb';
+    String apiKey = '3104ea1278484a65baa6cf11bca98f8a';
     String url =
-        'https://newsapi.org/v2/everything?qInTitle=$query&from=2024-07-09&language=en&sortBy=publishedAt&apiKey=3104ea1278484a65baa6cf11bca98f8a';
+        'https://newsapi.org/v2/everything?q=$query&from=2024-07-22&language=en&sortBy=publishedAt&apiKey=$apiKey';
 
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
